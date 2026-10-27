@@ -12,7 +12,7 @@ export function Header() {
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
             <Package className="h-4 w-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-semibold text-foreground">BodegasMX</span>
+          <span className="text-lg font-extrabold tracking-tight text-foreground">SurtidoraMX</span>
         </Link>
         
         <nav className="hidden items-center gap-6 md:flex">

@@ -7,8 +7,8 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'BodegasMX | Trabaja desde casa',
-  description: 'Genera ingresos desde la comodidad de tu hogar empacando y organizando productos. Salario semanal de $4,000 MXN.',
+  title: 'SurtidoraMX | Empaca desde casa',
+  description: 'Únete a SurtidoraMX: empaca y organiza productos desde casa con entrega a domicilio y pagos semanales.',
   generator: 'v0.app',
   icons: {
     icon: [

@@ -28,11 +28,11 @@ export function BenefitsSection() {
     <section id="beneficios" className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl text-balance">
+          <h2 className="mb-4 text-3xl font-extrabold text-foreground md:text-4xl text-balance">
             ¿Por qué unirte a nosotros?
           </h2>
           <p className="text-muted-foreground text-balance">
-            En BodegasMX te ofrecemos la oportunidad de generar ingresos de manera cómoda y segura
+            En SurtidoraMX te ofrecemos la oportunidad de generar ingresos de manera cómoda y segura
           </p>
         </div>
 

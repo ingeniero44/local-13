@@ -28,7 +28,7 @@ export function HowItWorksSection() {
     <section id="como-funciona" className="bg-primary/5 py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl text-balance">
+          <h2 className="mb-4 text-3xl font-extrabold text-foreground md:text-4xl text-balance">
             ¿Cómo funciona?
           </h2>
           <p className="text-muted-foreground text-balance">

@@ -16,10 +16,10 @@ export function Header() {
         </Link>
         
         <nav className="hidden items-center gap-6 md:flex">
-          <Link href="#beneficios" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <Link href="#beneficios" className="text-sm font-semibold text-foreground transition-colors hover:text-primary">
             Beneficios
           </Link>
-          <Link href="#como-funciona" className="text-sm text-muted-foreground transition-colors hover:text-foreground">
+          <Link href="#como-funciona" className="text-sm font-semibold text-foreground transition-colors hover:text-primary">
             Cómo funciona
           </Link>
           <Button asChild className="bg-primary hover:bg-primary/90">

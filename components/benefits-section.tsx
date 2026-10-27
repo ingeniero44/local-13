@@ -25,30 +25,32 @@ const benefits = [
 
 export function BenefitsSection() {
   return (
-    <section id="beneficios" className="py-16 md:py-24">
+    <section id="beneficios" className="scroll-mt-20 py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="mx-auto mb-12 max-w-2xl text-center">
-          <h2 className="mb-4 text-3xl font-bold text-foreground md:text-4xl text-balance">
-            ¿Por qué unirte a nosotros?
-          </h2>
-          <p className="text-muted-foreground text-balance">
-            En BodegasMX te ofrecemos la oportunidad de generar ingresos de manera cómoda y segura
-          </p>
-        </div>
+        <div className="mx-auto max-w-6xl rounded-[2rem] border border-white/80 bg-white/95 p-6 shadow-xl shadow-blue-950/10 backdrop-blur sm:p-8 md:p-10">
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <h2 className="mb-4 text-3xl font-extrabold text-foreground md:text-4xl text-balance">
+              ¿Por qué unirte a nosotros?
+            </h2>
+            <p className="text-muted-foreground text-balance">
+              En SurtidoraMX te ofrecemos la oportunidad de generar ingresos de manera cómoda y segura
+            </p>
+          </div>
 
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {benefits.map((benefit, index) => (
-            <div
-              key={index}
-              className="rounded-2xl border border-border bg-card p-6 transition-shadow hover:shadow-md"
-            >
-              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
-                <benefit.icon className="h-6 w-6 text-primary" />
+          <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {benefits.map((benefit, index) => (
+              <div
+                key={index}
+                className="rounded-2xl border border-border bg-muted/40 p-6 transition-shadow hover:shadow-md"
+              >
+                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary">
+                  <benefit.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="mb-2 font-semibold text-foreground">{benefit.title}</h3>
+                <p className="text-sm text-muted-foreground">{benefit.description}</p>
               </div>
-              <h3 className="mb-2 font-semibold text-foreground">{benefit.title}</h3>
-              <p className="text-sm text-muted-foreground">{benefit.description}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>

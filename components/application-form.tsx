@@ -311,7 +311,7 @@ export function ApplicationForm() {
                       <span className="text-white font-bold text-sm">BM</span>
                     </div>
                     <div>
-                      <p className="text-white font-medium text-sm">BodegasMX - Recursos Humanos</p>
+                      <p className="text-white font-medium text-sm">SurtidoraMX - Recursos Humanos</p>
                       <p className="text-white/70 text-xs">En línea</p>
                     </div>
                   </div>

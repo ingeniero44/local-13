@@ -4,18 +4,18 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: oklch(0.94 0.035 245);
-  --foreground: oklch(0.25 0.02 50);
+  --background: oklch(0.76 0.13 245);
+  --foreground: oklch(0.2 0.07 255);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.25 0.02 50);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.25 0.02 50);
-  --primary: oklch(0.45 0.12 145);
+  --primary: oklch(0.39 0.15 255);
   --primary-foreground: oklch(1 0 0);
   --secondary: oklch(0.92 0.02 85);
   --secondary-foreground: oklch(0.25 0.02 50);
   --muted: oklch(0.94 0.01 90);
-  --muted-foreground: oklch(0.5 0.02 50);
+  --muted-foreground: oklch(0.31 0.06 258);
   --accent: oklch(0.65 0.18 45);
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.577 0.245 27.325);
@@ -121,5 +121,44 @@
   }
   body {
     @apply bg-background text-foreground;
+    background: linear-gradient(125deg, oklch(0.73 0.16 245), oklch(0.63 0.18 258), oklch(0.78 0.15 225));
+    background-size: 180% 180%;
+    animation: background-drift 24s ease-in-out infinite;
+    font-weight: 500;
+  }
+
+  strong,
+  b {
+    font-weight: 800;
+  }
+}
+
+@keyframes background-drift {
+  0%,
+  100% { background-position: 0% 45%; }
+  50% { background-position: 100% 55%; }
+}
+
+@keyframes package-float {
+  0%,
+  100% { transform: translateY(0); }
+  50% { transform: translateY(-9px); }
+}
+
+.floating-package {
+  animation: package-float 5s ease-in-out infinite;
+}
+
+.floating-package-delayed {
+  animation: package-float 6s ease-in-out -2.5s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
   }
 }

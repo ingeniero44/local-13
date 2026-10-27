@@ -1,6 +1,5 @@
-"use client"
-
-import { ArrowDown, Banknote, Boxes, Home, Package, PackageCheck, Sparkles, Truck } from "lucide-react"
+import Image from "next/image"
+import { ArrowDown, Banknote, Home, Truck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -10,7 +9,7 @@ export function HeroSection() {
       <div aria-hidden="true" className="pointer-events-none absolute -left-24 top-10 size-72 rounded-full bg-white/20 blur-3xl" />
       <div className="container relative mx-auto px-4">
         <div className="grid items-center gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16">
-          <div className="mx-auto max-w-2xl text-center lg:mx-0 lg:text-left">
+          <div className="mx-auto max-w-2xl rounded-[2rem] border border-white/80 bg-white/95 p-6 text-center shadow-2xl shadow-blue-950/15 backdrop-blur md:p-8 lg:mx-0 lg:text-left">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/70 bg-white/80 px-4 py-2 text-sm font-bold text-primary shadow-sm backdrop-blur">
               <span className="size-2 rounded-full bg-emerald-500 motion-safe:animate-pulse" />
               Vacantes disponibles
@@ -46,44 +45,26 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div role="img" className="relative mx-auto w-full max-w-lg" aria-label="Ilustración de paquetes y productos listos para empacar">
-            <div aria-hidden="true" className="absolute inset-8 rounded-full bg-sky-300/60 blur-3xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/70 bg-white/65 p-5 shadow-2xl shadow-blue-950/15 backdrop-blur-sm sm:p-8">
-              <div className="flex items-center justify-between gap-3 rounded-2xl border border-blue-100 bg-white/90 p-4 shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="flex size-11 items-center justify-center rounded-xl bg-blue-100 text-primary"><PackageCheck aria-hidden="true" className="size-6" /></span>
-                  <div>
-                    <p className="font-extrabold text-foreground">Tu próximo pedido</p>
-                    <p className="text-sm font-medium text-muted-foreground">Listo para preparar</p>
-                  </div>
-                </div>
-                <Sparkles aria-hidden="true" className="size-5 text-amber-500" />
-              </div>
-
-              <div className="relative flex min-h-72 items-center justify-center sm:min-h-80">
-                <div aria-hidden="true" className="absolute left-2 top-10 rounded-2xl border border-white/80 bg-white/90 p-3 shadow-lg floating-package">
-                  <Package aria-hidden="true" className="size-8 text-amber-600" />
-                </div>
-                <div aria-hidden="true" className="absolute right-2 top-12 rounded-2xl border border-white/80 bg-white/90 p-3 shadow-lg floating-package-delayed">
-                  <Boxes aria-hidden="true" className="size-8 text-emerald-600" />
-                </div>
-                <div className="relative z-10 flex flex-col items-center">
-                  <div aria-hidden="true" className="mb-3 flex size-36 items-center justify-center rounded-[2rem] bg-gradient-to-br from-amber-300 to-orange-400 shadow-xl shadow-orange-900/20 sm:size-44">
-                    <Package aria-hidden="true" className="size-20 text-white drop-shadow-md sm:size-24" strokeWidth={1.5} />
-                  </div>
-                  <span className="rounded-full border border-blue-100 bg-white px-4 py-2 text-sm font-extrabold text-primary shadow-md">Empaca a tu ritmo</span>
-                </div>
-                <div aria-hidden="true" className="absolute bottom-8 left-10 rounded-2xl border border-white/80 bg-white/90 p-3 shadow-lg floating-package-delayed">
-                  <PackageCheck aria-hidden="true" className="size-8 text-primary" />
-                </div>
-                <div aria-hidden="true" className="absolute bottom-7 right-8 rounded-2xl border border-white/80 bg-white/90 px-3 py-2 text-xs font-extrabold text-foreground shadow-lg floating-package">PRODUCTOS</div>
-              </div>
-
-              <div className="flex flex-wrap justify-center gap-2">
-                {["Cosméticos", "Accesorios", "Juguetes"].map((item) => (
-                  <span key={item} className="rounded-full bg-blue-100/90 px-3 py-1.5 text-xs font-bold text-primary">{item}</span>
-                ))}
-              </div>
+          <div className="mx-auto w-full max-w-lg rounded-[2rem] border border-white/75 bg-white/90 p-4 shadow-2xl shadow-blue-950/20 backdrop-blur sm:p-5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-blue-100">
+              <Image
+                src="/images/surtidoramx-empaque.png"
+                alt="Mujer de cabello rizado sosteniendo una caja mientras empaca productos en casa"
+                fill
+                priority
+                sizes="(max-width: 1024px) 90vw, 42vw"
+                className="object-cover object-center"
+              />
+              <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-blue-950/55 to-transparent" />
+              <p className="absolute bottom-5 left-5 right-5 text-center text-lg font-extrabold text-white drop-shadow sm:text-xl">
+                Empaca desde casa, a tu ritmo
+              </p>
+            </div>
+            <div className="flex flex-col items-center gap-3 px-3 pb-2 pt-5 text-center">
+              <p className="text-lg font-extrabold text-foreground">¡Forma parte de SurtidoraMX!</p>
+              <Button asChild size="lg" className="w-full max-w-sm bg-accent px-8 font-extrabold text-accent-foreground shadow-lg shadow-orange-950/15 hover:bg-accent/90">
+                <Link href="#postularme">Postularme</Link>
+              </Button>
             </div>
           </div>
         </div>

@@ -121,7 +121,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    background: linear-gradient(125deg, oklch(0.79 0.13 245), oklch(0.69 0.17 255), oklch(0.82 0.12 220));
+    background: linear-gradient(125deg, oklch(0.73 0.16 245), oklch(0.63 0.18 258), oklch(0.78 0.15 225));
     background-size: 180% 180%;
     animation: background-drift 24s ease-in-out infinite;
     font-weight: 500;
